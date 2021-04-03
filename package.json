@@ -1,10 +1,11 @@
 {
   "name": "@momentech/node-api-utils",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "git@github.com:momentechnologies/node-api-utils.git",
   "author": "Max Moeschinger <m.moeschinger@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
