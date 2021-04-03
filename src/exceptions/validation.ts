@@ -6,13 +6,12 @@ type validationError = {
     uid: number;
 };
 
-export const validationTypes = {
-    INVALID_PARAMETER: 1,
-    ALREADY_EXISTS: 2,
-    NOT_FOUND: 3,
-};
-
 export default class Validation extends ApiException {
+    static validationTypes = {
+        INVALID_PARAMETER: 1,
+        ALREADY_EXISTS: 2,
+        NOT_FOUND: 3,
+    };
     errors: validationError[];
 
     constructor(errors: validationError[] | validationError = []) {
@@ -35,14 +34,14 @@ export default class Validation extends ApiException {
             messages: this.errors,
         });
     }
-}
 
-export const validationError = (
-    key: string,
-    message: string,
-    uid = validationTypes.INVALID_PARAMETER
-): validationError => ({
-    key,
-    message,
-    uid,
-});
+    static validationError = (
+        key: string,
+        message: string,
+        uid = Validation.validationTypes.INVALID_PARAMETER
+    ): validationError => ({
+        key,
+        message,
+        uid,
+    });
+}
