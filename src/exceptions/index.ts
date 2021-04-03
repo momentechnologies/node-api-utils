@@ -1,4 +1,4 @@
-export { default as Api } from './apiException';
+export { default as Api } from './api';
 export { default as Client } from './client';
 export { default as EndpointNotFound } from './endpointNotFound';
 export { default as NotFound } from './notFound';
