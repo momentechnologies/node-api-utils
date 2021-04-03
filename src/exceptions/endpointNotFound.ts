@@ -1,6 +1,6 @@
-import ApiException, { errorResponse } from './apiException.js';
+import ApiError, { errorResponse } from './api';
 
-export default class EndpointNotFound extends ApiException {
+export default class EndpointNotFound extends ApiError {
     path;
     method;
 

@@ -1,6 +1,6 @@
-import ApiException, { errorResponse } from './apiException.js';
+import ApiError, { errorResponse } from './api';
 
-export default class NotFound extends ApiException {
+export default class NotFound extends ApiError {
     parameter;
 
     constructor(parameter: string) {

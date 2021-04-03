@@ -1,7 +1,7 @@
-export { default as apiException } from './apiException';
-export { default as client } from './client';
-export { default as endpointNotFound } from './endpointNotFound';
-export { default as notFound } from './notFound';
-export { default as notLoggedIn } from './notLoggedIn';
-export { default as unauthorized } from './unauthorized';
-export { default as validation } from './validation';
+export { default as Api } from './apiException';
+export { default as Client } from './client';
+export { default as EndpointNotFound } from './endpointNotFound';
+export { default as NotFound } from './notFound';
+export { default as NotLoggedIn } from './notLoggedIn';
+export { default as Unauthorized } from './unauthorized';
+export { default as Validation } from './validation';

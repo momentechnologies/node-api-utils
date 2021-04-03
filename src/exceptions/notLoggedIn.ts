@@ -1,6 +1,6 @@
-import ApiException, { errorResponse } from './apiException.js';
+import ApiError, { errorResponse } from './api';
 
-export default class NotLoggedIn extends ApiException {
+export default class NotLoggedIn extends ApiError {
     constructor() {
         super('You are not logged in');
         this.reportToSentry = false;

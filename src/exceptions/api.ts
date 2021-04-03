@@ -1,4 +1,4 @@
-export default class ApiException extends Error {
+export default class ApiError extends Error {
     reportToSentry: boolean = true;
     status: number = 500;
 

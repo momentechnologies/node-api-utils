@@ -1,6 +1,6 @@
-import ApiException, { errorResponse } from './apiException';
+import ApiError, { errorResponse } from './api';
 
-export default class Client extends ApiException {
+export default class Client extends ApiError {
     error;
     key;
 

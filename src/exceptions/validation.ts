@@ -1,4 +1,4 @@
-import ApiException, { errorResponse } from './apiException.js';
+import ApiError, { errorResponse } from './api';
 
 type validationError = {
     key: string;
@@ -6,7 +6,7 @@ type validationError = {
     uid: number;
 };
 
-export default class Validation extends ApiException {
+export default class Validation extends ApiError {
     static validationTypes = {
         INVALID_PARAMETER: 1,
         ALREADY_EXISTS: 2,

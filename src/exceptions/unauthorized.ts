@@ -1,4 +1,4 @@
-import ApiException, { errorResponse } from './apiException.js';
+import ApiError, { errorResponse } from './api';
 
 export const unauthorizedTypes = {
     NO_ACCESS: 1,
@@ -10,7 +10,7 @@ const uidMessages = {
     [unauthorizedTypes.NOT_LOGGED_IN]: 'You are not logged in',
 };
 
-export default class Unauthorized extends ApiException {
+export default class Unauthorized extends ApiError {
     uid;
 
     constructor(message: string, uid = unauthorizedTypes.NO_ACCESS) {
