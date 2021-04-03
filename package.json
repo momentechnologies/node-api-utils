@@ -12,7 +12,8 @@
     "lib/**/*"
   ],
   "exports": {
-    "./": "./lib"
+    "./services": "./lib/services",
+    "./exceptions": "./lib/exceptions"
   },
   "scripts": {
     "build": "rm -rf lib/ && tsc",
