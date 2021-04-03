@@ -16,7 +16,7 @@ export default class Unauthorized extends ApiError {
     constructor(message: string, uid = unauthorizedTypes.NO_ACCESS) {
         super(message);
         this.uid = uid;
-        this.reportToSentry = false;
+        this.canBeReported = false;
     }
 
     getStatus() {

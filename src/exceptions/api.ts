@@ -1,10 +1,10 @@
 export default class ApiError extends Error {
-    reportToSentry: boolean = true;
+    canBeReported: boolean = true;
     status: number = 500;
 
-    constructor(message: string, reportToSentry: boolean = true) {
+    constructor(message: string, canBeReported: boolean = true) {
         super(message);
-        this.reportToSentry = reportToSentry;
+        this.canBeReported = canBeReported;
     }
 
     getStatus(): number {

@@ -6,7 +6,7 @@ export default class NotFound extends ApiError {
     constructor(parameter: string) {
         super(`${parameter} was not found`);
         this.parameter = parameter;
-        this.reportToSentry = false;
+        this.canBeReported = false;
     }
 
     getStatus() {

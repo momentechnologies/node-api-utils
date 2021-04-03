@@ -8,7 +8,7 @@ export default class Client extends ApiError {
         super(message);
         this.key = key;
         this.error = error;
-        this.reportToSentry = false;
+        this.canBeReported = false;
     }
 
     getStatus() {

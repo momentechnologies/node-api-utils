@@ -8,7 +8,7 @@ export default class EndpointNotFound extends ApiError {
         super('Endpoint was not found');
         this.path = path;
         this.method = method;
-        this.reportToSentry = false;
+        this.canBeReported = false;
     }
 
     getStatus() {

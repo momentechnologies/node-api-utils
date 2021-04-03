@@ -16,7 +16,7 @@ export default class Validation extends ApiError {
 
     constructor(errors: validationError[] | validationError = []) {
         super('The request is not valid');
-        this.reportToSentry = false;
+        this.canBeReported = false;
 
         if (Array.isArray(errors)) {
             this.errors = errors;
